@@ -115,7 +115,7 @@ The generated HTML file includes advanced JavaScript-based controls located in t
 # 💻 Tech Stack
 
 * **NetworkX** Provides the data structure for the graphs and relationships between the files.
-* **PyVis** Takes abstract math from NetworkX and converts it into a beautiful HTML/JS interace, that a user can open in a browser.
+* **PyVis** Takes abstract math from NetworkX and converts it into a beautiful HTML/JS interface, that a user can open in a browser.
 * **Click** Handles all CLI logic
 
 ---
