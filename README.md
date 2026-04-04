@@ -114,14 +114,15 @@ The generated HTML file includes advanced JavaScript-based controls located in t
 
 # 💻 Tech Stack
 
-* **NetworkX**
-* **PyVis**
-* **Click**
+* **NetworkX** Provides the data structure for the graphs and relationships between the files.
+* **PyVis** Takes abstract math from NetworkX and converts it into a beautiful HTML/JS interace, that a user can open in a browser.
+* **Click** Handles all CLI logic
 
 ---
 
 # 📝 Notes for Developers
-The project uses repomix for codebase packing and analysis.
+
+- The project uses repomix for codebase packing and analysis.
 - Static assets for the visualization (CSS/JS) are stored in the lib/ directory.
 
 ---
