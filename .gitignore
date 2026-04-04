@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+.env
+
+# Pydescope Outputs
+pydescope.html
+pydescope_graph.html
+
+# Distribution / Build
+dist/
+build/
+*.egg-info/
+
+# logs
+*.logs

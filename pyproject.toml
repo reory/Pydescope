@@ -1,0 +1,28 @@
+[project]
+name = "pydescope"
+version = "0.1.0"
+description = "Pydescope: A static analysis tool that visualises Python project dependencies using NetworkX and PyVis."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Roy Peters", email = "reory35@hotmail.com" }
+]
+keywords = ["static analysis", "dependency graph", "python", "networkx", "pyvis", "architecture"]
+requires-python = ">=3.9"
+
+dependencies = [
+    "networkx>=3.0",
+    "pyvis>=0.3.2",
+    "click>=8.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/pydescope"
+Repository = "https://github.com/yourusername/pydescope"
+
+[project.scripts]
+pydescope = "pydescope.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
