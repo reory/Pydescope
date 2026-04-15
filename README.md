@@ -19,10 +19,10 @@ Pydescope is a static analysis tool designed to help developers visualize the in
 * **Edges** visualize the directed import relationships between them. 
 - The interface supports real-time filtering and neighborhood highlighting to help developers audit project coupling and structural integrity at a glance.
 
-![](screenshots/djangocsvcleaner.png)
-![](screenshots/internetradio.png)
-![](screenshots/invoicefrauddetector.png)
-![](screenshots/pydescope.png)
+![Pydescope module dependency map 1](screenshots/djangocsvcleaner.png)
+![Pydescope module dependency map 2](screenshots/internetradio.png)
+![Pydescope module dependency map 3](screenshots/invoicefrauddetector.png)
+![Pydescope module dependency map 4](screenshots/pydescope.png)
 
 ---
 
