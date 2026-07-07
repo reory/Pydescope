@@ -39,7 +39,7 @@ Pydescope is a static analysis tool designed to help developers visualize the in
 
 # 🏗️ Project Architecture
 
-```
+```python
 pydescope/
 ├── .gitignore               # Standard git ignore rules
 ├── pyproject.toml           # Build system and dependency configuration
@@ -57,6 +57,14 @@ pydescope/
 └── lib/                     # Static assets for the final output
     └── bindings/
         └── utils.js         # Custom JS for highlighting and interactivity
+├── tests/                   # Pytest/Hypothesis suite
+    ├── test_analyser.py
+    ├── test_cli.py.py
+    ├── test_graph_builder.py
+    ├── test_parser.py
+    ├── test_renderer.py
+    ├── test_utils.py
+
 ```
 
 - Pydescope is built with a modular design to ensure efficient parsing and rendering:
