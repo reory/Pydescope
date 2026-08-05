@@ -1,6 +1,6 @@
 # PyVis interactive graph
 
-from pyvis.network import Network 
+from pyvis.network import Network
 
 MAX_NODES_DEFAULT = 200
 

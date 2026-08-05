@@ -1,14 +1,16 @@
 # Command Line Interface
 
-import click
 import logging
 from pathlib import Path
-from .utils import setup_logging, get_logger
 
-from .parser import ImportParser
+import click
+
 from .analyser import DependencyAnalyser
 from .graph_builder import GraphBuilder
-from .renderer import PyVisRenderer, MAX_NODES_DEFAULT
+from .parser import ImportParser
+from .renderer import MAX_NODES_DEFAULT, PyVisRenderer
+from .utils import get_logger, setup_logging
+
 
 @click.command()
 @click.argument("path", type=click.Path(exists=True))

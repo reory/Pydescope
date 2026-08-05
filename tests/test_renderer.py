@@ -1,6 +1,8 @@
-import pytest
 import networkx as nx
-from pydescope.renderer import PyVisRenderer, MAX_NODES_DEFAULT
+import pytest
+
+from pydescope.renderer import MAX_NODES_DEFAULT, PyVisRenderer
+
 
 def test_renderer_happy_path(tmp_path):
     """Verify that a small graph renders successfully and writes an HTML file."""

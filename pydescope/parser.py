@@ -2,7 +2,8 @@
 
 import ast
 from pathlib import Path
-from .utils import is_internal_import, normalise_module_name, get_logger
+
+from .utils import get_logger, is_internal_import, normalise_module_name
 
 logger = get_logger(__name__)
 

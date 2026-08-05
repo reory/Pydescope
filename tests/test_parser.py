@@ -1,5 +1,7 @@
 import pytest
+
 from pydescope.parser import ImportParser
+
 
 @pytest.fixture
 def mock_root(tmp_path):

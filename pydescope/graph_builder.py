@@ -1,5 +1,6 @@
 # Networkx Graph
-import networkx as nx 
+import networkx as nx
+
 
 class GraphBuilder:
     def __init__(self, edges):

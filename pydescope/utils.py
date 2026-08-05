@@ -7,6 +7,7 @@ import logging
 import sys
 from pathlib import Path
 
+
 def setup_logging(level=logging.INFO):
     """Initialises the global logging configuration"""
 
@@ -42,6 +43,4 @@ def is_internal_import(import_name: str, project_root: Path) -> bool:
 
     # Check for a package directory eg pydescope/__init__.py
     as_package = project_root / Path("/".join(parts)) / "__init__.py"
-    if as_package.exists():
-        return True
-    return False
+    return as_package.exists()
