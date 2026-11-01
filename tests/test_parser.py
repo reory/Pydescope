@@ -5,10 +5,14 @@ from pydescope.parser import ImportParser
 
 @pytest.fixture
 def mock_root(tmp_path):
+    """Return a temporary project root directory."""
+
     return tmp_path
 
 @pytest.fixture
 def sample_python_code():
+    """Provide sample Python source code for tests."""
+
     return """
 import os
 from .utils import is_internal_import

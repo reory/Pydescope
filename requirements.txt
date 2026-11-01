@@ -1,4 +1,6 @@
-hypothesis==6.156.1
-networkx==3.6.1
+hypothesis
+networkx
+pytest
 pytest==9.1.1
 pytest-cov==7.1.0
+pyvis

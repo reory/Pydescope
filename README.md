@@ -9,14 +9,28 @@
 ![PyVis](https://img.shields.io/badge/PyVis-v0.3.0+-FF69B4?style=for-the-badge&logo=javascript&logoColor=green)
 ![Click](https://img.shields.io/badge/Click-v8.0+-3DDC84?style=for-the-badge&logo=python&logoColor=white)
 
-Pydescope is a static analysis tool designed to help developers visualize the internal structure and dependencies of their Python projects. By parsing source code and mapping imports, it generates interactive 2D/3D graphs using NetworkX and PyVis, allowing you to see how different modules interact without the clutter of virtual environments or external libraries.
+Pydescope is a static analysis tool that visualizes the internal structure of Python projects. By parsing source code and mapping imports, it generates interactive dependency graphs using NetworkX and PyVis.
 
 ---
 
-# 📸 Screenshots
+## 📑 Table of Contents
+
+- [Screenshots](#-screenshots)
+- [Key Features](#-key-features)
+- [Project Architecture](#️-project-architecture)
+- [Installation](#️-installation)
+- [Tech Stack](#-tech-stack)
+- [Testing](#-testing)
+- [Roadmap Features](#️-roadmap)
+- [Notes for Developers](#-notes-for-developers)
+
+---
+
+## 📸 Screenshots
+
 * **Pydescope** renders an interactive dependency map of your codebase. 
 * **Nodes** represent Python modules and packages, while 
-* **Edges** visualize the directed import relationships between them. 
+* **Edges** visualise the directed import relationships between them. 
 - The interface supports real-time filtering and neighborhood highlighting to help developers audit project coupling and structural integrity at a glance.
 
 ![Pydescope module dependency map 1](screenshots/djangocsvcleaner.png)
@@ -26,18 +40,18 @@ Pydescope is a static analysis tool designed to help developers visualize the in
 
 ---
 
-# 🧠 Key Features
+## 🧠 Key Features
 - Static Analysis: Scans your .py files and directories to build a map of your code.
 - Smart Filtering: Automatically ignores venv, __pycache__, and other non-source directories.
-- Interactive Graphs: Generates an HTML-based visualization where you can drag nodes, zoom, and highlight neighborhoods.
-- Module Tracking: Distinguishes between package initializations (__init__.py) and standard module files.
+- Interactive Graphs: Generates an HTML-based visualisation where you can drag nodes, zoom, and highlight neighborhoods.
+- Module Tracking: Distinguishes between package initialisations (__init__.py) and standard module files.
 - Neighborhood Highlight: Click on a node to highlight its direct dependencies and dim the rest of the graph.
 - Search/Filter: Use the built-in search bar (powered by TomSelect) to find specific modules.
-- Physics Toggle: Enable or disable the physics engine to stabilize the graph layout.
+- Physics Toggle: Enable or disable the physics engine to stabilise the graph layout.
 
 ---
 
-# 🏗️ Project Architecture
+## 🏗️ Project Architecture
 
 ```python
 pydescope/
@@ -47,23 +61,23 @@ pydescope/
 ├── CONTRIBUTING.md          # Contributing documentation
 ├── LICENSE.md               # License documentation
 ├── pydescope/               # Core logic package
-│   ├── __init__.py          # Package initialization
-│   ├── analyzer.py          # Logic for parsing imports and code analysis
+│   ├── __init__.py          # Package initialisation
+│   ├── analyser.py          # Logic for parsing imports and code analysis
 │   ├── graph_builder.py     # NetworkX graph construction
-|   ├── parser.py            # Identifes .py files in projects
+|   ├── parser.py            # Identifies .py files in projects
 │   ├── renderer.py          # PyVis conversion and HTML generation
 │   └── utils.py             # Internal helper functions
 |   └── cli.py               # User interaction tool
 └── lib/                     # Static assets for the final output
-    └── bindings/
-        └── utils.js         # Custom JS for highlighting and interactivity
+|    └── bindings/
+|       └── utils.js         # Custom JS for highlighting and interactivity
 ├── tests/                   # Pytest/Hypothesis suite
     ├── test_analyser.py
-    ├── test_cli.py.py
+    ├── test_cli.py
     ├── test_graph_builder.py
     ├── test_parser.py
     ├── test_renderer.py
-    ├── test_utils.py
+    └── test_utils.py
 
 ```
 
@@ -80,26 +94,28 @@ pydescope/
 
 ---
 
-# 🛠️ Installation
+## 🛠️ Installation
 Clone your repository (or navigate to the project folder):
 
 - Prerequisites
-Before running Pydescope, ensure you have Python 3.9 or higher installed.
+Before running Pydescope, ensure you have Python 3.10 or higher installed.
 
 ```Bash
+git clone https://github.com/reory/pydescope
 cd pydescope
 ```
-## Install in editable mode:
+### Install in editable mode:
 This installs the dependencies and allows you to run the pydescope command directly.
 
 ```Bash
 pip install -e .
+pip install -r requirements.txt
 ```
-## How to Run
+### How to Run
 Once installed, you can run Pydescope from your terminal.
 
-## Basic Usage
-Point Pydescope at any Python project directory you want to analyze:
+### Basic Usage
+Point Pydescope at any Python project directory you want to analyse:
 
 ```Bash
 pydescope <path_to_target_project>
@@ -120,7 +136,7 @@ The generated HTML file includes advanced JavaScript-based controls located in t
 
 ---
 
-# 💻 Tech Stack
+## 💻 Tech Stack
 
 * **NetworkX** Provides the data structure for the graphs and relationships between the files.
 * **PyVis** Takes abstract math from NetworkX and converts it into a beautiful HTML/JS interface, that a user can open in a browser.
@@ -128,10 +144,41 @@ The generated HTML file includes advanced JavaScript-based controls located in t
 
 ---
 
-# 📝 Notes for Developers
+## 🧪 Testing
 
-- The project uses repomix for codebase packing and analysis.
-- Static assets for the visualization (CSS/JS) are stored in the lib/ directory.
+Run the test suite:
+
+```bash
+pytest
+```
+
+Run linting:
+
+```bash
+ruff check .
+```
+
+---
+
+## 🛣️ Roadmap Features
+
+- [ ] Export Graph as SVG/PNG
+- [ ] Interactive Module Filtering
+- [ ] Circular Import Detection
+- [ ] Unused Module Detection
+- [ ] Dependency Metrics and Complexity Scoring
+- [ ] Package-Level Dependency Views
+- [ ] Module Search and Navigation
+- [ ] Import Statistics Dashboard
+- [ ] Architectural Rule Checks
+- [ ] Dependency Diff Comparison
+
+---
+
+## Notes for Developers
+
+- Static assets are stored in `lib/`.
+- The project uses Repomix for codebase analysis and packaging.
 
 ---
 
